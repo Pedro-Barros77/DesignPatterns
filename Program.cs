@@ -1,4 +1,5 @@
-﻿using FactoryMethod;
+﻿using AbstractFactory;
+using FactoryMethod;
 using static DesignPatterns.ConsoleUtils;
 
 namespace DesignPatterns
@@ -9,10 +10,15 @@ namespace DesignPatterns
         {
             WriteColored("Inicializando...", 2);
 
-            var factorDesign = new FactoryMethodDesign();
-            factorDesign.Describe();
-            await factorDesign.RunProblem();
-            await factorDesign.RunSolution();
+            //var factoryDesign = new FactoryMethodDesign();
+            //factoryDesign.Describe();
+            //await factoryDesign.RunProblem();
+            //await factoryDesign.RunSolution();
+
+            var abstractFactoryDesign = new AbstractFactoryDesign();
+            abstractFactoryDesign.Describe();
+            await abstractFactoryDesign.RunProblem();
+            await abstractFactoryDesign.RunSolution();
         }
     }
 }

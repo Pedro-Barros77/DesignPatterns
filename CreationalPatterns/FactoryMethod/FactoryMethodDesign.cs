@@ -28,8 +28,11 @@ namespace FactoryMethod
 
             RequestInput();
 
+            //If user chooses Email
             await Problem.SatisfactionSurveyService.SendSatisfactionSurvey(Problem.PreferredMessageType.Email, RequestUser);
+            //If user chooses Whatsapp
             await Problem.SatisfactionSurveyService.SendSatisfactionSurvey(Problem.PreferredMessageType.Whatsapp, RequestUser);
+            //If user chooses SMS
             await Problem.SatisfactionSurveyService.SendSatisfactionSurvey(Problem.PreferredMessageType.SMS, RequestUser);
 
             WriteSeparator();
@@ -42,9 +45,9 @@ namespace FactoryMethod
 
         public async Task RunSolution()
         {
-            WriteColored([new("Solução", ConsoleColor.Green), new(" (Factory Method)", ConsoleColor.White, 1)]);
+            WriteColored(new TextItem("Solução", ConsoleColor.Green), new TextItem(" (Factory Method)", ConsoleColor.White, 1));
             WriteColored("O padrão de design Factory Method sugere substituir a chamada ao construtor ");
-            WriteColored([new("new", ConsoleColor.Blue), new("()", ConsoleColor.White)]);
+            WriteColored(new TextItem("new", ConsoleColor.Blue), new TextItem("()", ConsoleColor.White));
             WriteColored(new(" por um método especial em uma classe "), new("\"Factory\"", ConsoleColor.White), new(".", 1));
             WriteColored(new("Objetos retornados por essa fábrica são chamados de "), new("\"Products\"", ConsoleColor.White), new(".", 1));
             WriteColored("Dessa forma, fábricas filhas podem sobrescrever esse método e retornar seu próprio tipo de produto, seja ele ");
@@ -54,12 +57,15 @@ namespace FactoryMethod
 
             RequestInput();
 
+            //If user chooses Email
             var emailFactory = new EmailMessageFactory();
             await Solution.SatisfactionSurveyService.SendSatisfactionSurvey(emailFactory, RequestUser.email);
 
+            //If user chooses Whatsapp
             var whatsappFactory = new WhatsappMessageFactory();
             await Solution.SatisfactionSurveyService.SendSatisfactionSurvey(whatsappFactory, RequestUser.phone);
 
+            //If user chooses SMS
             var smsFactory = new SmsMessageFactory();
             await Solution.SatisfactionSurveyService.SendSatisfactionSurvey(smsFactory, RequestUser.phone);
 
