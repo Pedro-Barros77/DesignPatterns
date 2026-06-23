@@ -1,7 +1,4 @@
-﻿using AbstractFactory;
-using Builder;
-using FactoryMethod;
-using static DesignPatterns.ConsoleUtils;
+﻿using static DesignPatterns.ConsoleUtils;
 
 namespace DesignPatterns
 {
@@ -35,10 +32,16 @@ namespace DesignPatterns
 
             //Structural Patterns
 
-            var adapterDesign = new Adapter.AdapterDesign();
-            adapterDesign.Describe();
-            await adapterDesign.RunProblem();
-            await adapterDesign.RunSolution();
+            //var adapterDesign = new Adapter.AdapterDesign();
+            //adapterDesign.Describe();
+            //await adapterDesign.RunProblem();
+            //await adapterDesign.RunSolution();
+
+            var bridgeDesign = new Bridge.BridgeDesign();
+            bridgeDesign.Describe();
+            await bridgeDesign.RunProblem();
+            await bridgeDesign.RunSolution();
+
         }
     }
 }
