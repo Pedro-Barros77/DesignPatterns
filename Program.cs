@@ -11,6 +11,8 @@ namespace DesignPatterns
         {
             WriteColored("Inicializando...", 2);
 
+            //Creational Patterns
+
             //var factoryDesign = new FactoryMethodDesign();
             //factoryDesign.Describe();
             //await factoryDesign.RunProblem();
@@ -26,10 +28,17 @@ namespace DesignPatterns
             //await builderDesign.RunProblem();
             //await builderDesign.RunSolution();
 
-            var prototypeDesign = new Prototype.PrototypeDesign();
-            prototypeDesign.Describe();
-            await prototypeDesign.RunProblem();
-            await prototypeDesign.RunSolution();
+            //var prototypeDesign = new Prototype.PrototypeDesign();
+            //prototypeDesign.Describe();
+            //await prototypeDesign.RunProblem();
+            //await prototypeDesign.RunSolution();
+
+            //Structural Patterns
+
+            var adapterDesign = new Adapter.AdapterDesign();
+            adapterDesign.Describe();
+            await adapterDesign.RunProblem();
+            await adapterDesign.RunSolution();
         }
     }
 }
