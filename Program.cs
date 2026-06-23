@@ -21,10 +21,15 @@ namespace DesignPatterns
             //await abstractFactoryDesign.RunProblem();
             //await abstractFactoryDesign.RunSolution();
 
-            var builderDesign = new BuilderDesign();
-            builderDesign.Describe();
-            await builderDesign.RunProblem();
-            await builderDesign.RunSolution();
+            //var builderDesign = new BuilderDesign();
+            //builderDesign.Describe();
+            //await builderDesign.RunProblem();
+            //await builderDesign.RunSolution();
+
+            var prototypeDesign = new Prototype.PrototypeDesign();
+            prototypeDesign.Describe();
+            await prototypeDesign.RunProblem();
+            await prototypeDesign.RunSolution();
         }
     }
 }
