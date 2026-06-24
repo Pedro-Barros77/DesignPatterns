@@ -37,11 +37,20 @@ namespace DesignPatterns
             //await adapterDesign.RunProblem();
             //await adapterDesign.RunSolution();
 
-            var bridgeDesign = new Bridge.BridgeDesign();
-            bridgeDesign.Describe();
-            await bridgeDesign.RunProblem();
-            await bridgeDesign.RunSolution();
+            //var bridgeDesign = new Bridge.BridgeDesign();
+            //bridgeDesign.Describe();
+            //await bridgeDesign.RunProblem();
+            //await bridgeDesign.RunSolution();
 
+            //var compositeDesign = new Composite.CompositeDesign();
+            //compositeDesign.Describe();
+            //await compositeDesign.RunProblem();
+            //await compositeDesign.RunSolution();
+
+            var decoratorDesign = new Decorator.DecoratorDesign();
+            decoratorDesign.Describe();
+            await decoratorDesign.RunProblem();
+            await decoratorDesign.RunSolution();
         }
     }
 }
