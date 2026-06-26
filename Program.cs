@@ -69,10 +69,17 @@ namespace DesignPatterns
                 return;
             }
 
-            flyweightDesign.Describe();
-            //necessário para não compartilhar memória RAM entre os 2 testes
-            await RunFlyweightTestInCleanProcess("--flyweight-problem");
-            await RunFlyweightTestInCleanProcess("--flyweight-solution");
+            //flyweightDesign.Describe();
+            ////necessário para não compartilhar memória RAM entre os 2 testes
+            //await RunFlyweightTestInCleanProcess("--flyweight-problem");
+            //await RunFlyweightTestInCleanProcess("--flyweight-solution");
+
+            //Behavioral Patterns
+
+            var chainOfResponsibilityDesign = new ChainOfResponsibility.ChainOfResponsibilityDesign();
+            chainOfResponsibilityDesign.Describe();
+            await chainOfResponsibilityDesign.RunProblem();
+            await chainOfResponsibilityDesign.RunSolution();
         }
 
         private static async Task RunFlyweightTestInCleanProcess(string mode)
